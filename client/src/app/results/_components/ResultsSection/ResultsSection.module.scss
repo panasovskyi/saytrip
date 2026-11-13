@@ -1,0 +1,31 @@
+@use "@/styles/variables" as *;
+
+.results {
+  width: 100%;
+  max-width: $container-width;
+  margin-inline: auto;
+  padding: 48px $page-padding-x 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.resultsHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.disclaimer {
+  font-size: 13px;
+  line-height: 1.6;
+  color: $color-muted;
+}

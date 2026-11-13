@@ -1,0 +1,24 @@
+@use "@/styles/variables" as *;
+
+.top {
+  width: 100%;
+  max-width: $container-width;
+  margin-inline: auto;
+  padding: 8px $page-padding-x 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+
+.understood {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.understoodTitle {
+  font-size: 15px;
+  font-weight: 800;
+  color: $color-body-2;
+}

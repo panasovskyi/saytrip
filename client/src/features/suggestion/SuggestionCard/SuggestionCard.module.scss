@@ -1,0 +1,199 @@
+@use "../../../styles/variables" as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: $color-surface;
+  border: 1px solid $color-line;
+  border-radius: $radius-card;
+
+  &:first-child {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    .cardImage {
+      flex: 1 1 460px;
+      height: auto;
+      min-height: 420px;
+    }
+
+    .cardBody {
+      flex: 1 1 460px;
+      padding: 36px;
+      gap: 20px;
+    }
+
+    .cardName {
+      font-size: 34px;
+    }
+
+    .cardWhy {
+      font-size: 17px;
+    }
+  }
+}
+
+.cardImage {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  background: $color-teal-soft;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.credit {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  padding: 6px 10px;
+  border-radius: $radius-pill;
+  background: rgba(11, 31, 42, 0.78);
+  color: $color-on-accent;
+  font-size: 12px;
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.cardBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+}
+
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.tag {
+  padding: 6px 12px;
+  border-radius: $radius-pill;
+  background: $color-accent-soft;
+  color: $color-accent-ink;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.saveButton {
+  margin-left: auto;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid $color-line;
+  border-radius: $radius-pill;
+  background: $color-surface;
+  font-weight: 700;
+  font-size: 14px;
+
+  &:hover {
+    border-color: $color-ink;
+  }
+}
+
+.cardName {
+  font-family: $font-display;
+  font-weight: 600;
+  font-size: 26px;
+}
+
+.cardCountry {
+  margin-top: 6px;
+  font-size: 15px;
+  color: $color-muted;
+}
+
+.cardWhy {
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-body;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.stat {
+  flex: 1 1 140px;
+  padding: 14px 16px;
+  border-radius: $radius-tile;
+  background: $color-canvas;
+}
+
+.statLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: $color-muted;
+}
+
+.statValue {
+  margin-top: 6px;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.highlight {
+  padding: 6px 12px;
+  border: 1px solid $color-line;
+  border-radius: $radius-pill;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.buttonPrimary {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: $radius-pill;
+  background: $color-accent;
+  color: $color-on-accent;
+  font-weight: 800;
+  font-size: 15px;
+
+  &:hover {
+    filter: brightness(0.92);
+  }
+}
+
+.buttonOutline {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border: 1.5px solid $color-ink;
+  border-radius: $radius-pill;
+  background: $color-surface;
+  font-weight: 800;
+  font-size: 15px;
+
+  &:hover {
+    background: $color-canvas;
+  }
+}

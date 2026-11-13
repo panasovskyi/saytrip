@@ -1,0 +1,45 @@
+@use "@/styles/variables" as *;
+
+.wrapper {
+  width: 100%;
+  max-width: $container-width;
+  margin-inline: auto;
+  padding: 48px $page-padding-x 64px;
+}
+
+.empty {
+  padding: 48px clamp(20px, 5vw, 36px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  background: $color-surface;
+  border: 1px solid $color-line;
+  border-radius: $radius-card;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: $radius-tile;
+  background: $color-teal-soft;
+  color: $color-teal;
+}
+
+.title {
+  font-family: $font-display;
+  font-weight: 600;
+  font-size: clamp(18px, 4vw, 22px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  max-width: 440px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-body;
+}

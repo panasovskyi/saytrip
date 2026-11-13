@@ -1,0 +1,24 @@
+@use "@/styles/variables" as *;
+
+.sort {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: $radius-pill;
+  background: $color-line-soft;
+}
+
+.sortButton {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: $radius-pill;
+  color: $color-body-2;
+  font-weight: 700;
+  font-size: 14px;
+
+  &[aria-pressed="true"] {
+    background: $color-surface;
+    color: $color-ink;
+    box-shadow: $shadow-seg;
+  }
+}

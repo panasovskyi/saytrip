@@ -1,0 +1,46 @@
+@use "@/styles/variables" as *;
+
+.clarify {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 22px;
+  background: $color-teal-soft;
+  border: 1px solid $color-teal-line;
+  border-radius: $radius-notice;
+}
+
+.clarifyQuestion {
+  flex: 1 1 420px;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.clarifyOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.clarifyOptions + .clarifyQuestion {
+  margin-top: 8px;
+}
+
+
+.clarifyOption {
+  min-height: 44px;
+  padding: 0 18px;
+  border: 1.5px solid $color-teal;
+  border-radius: $radius-pill;
+  background: $color-surface;
+  color: $color-teal-ink;
+  font-weight: 700;
+  font-size: 14px;
+
+  &:hover {
+    background: $color-teal;
+    color: $color-surface;
+  }
+}

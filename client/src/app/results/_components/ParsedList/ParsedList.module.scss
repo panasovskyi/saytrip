@@ -1,0 +1,32 @@
+@use "@/styles/variables" as *;
+
+.parsedList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.parsedChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid $color-line;
+  border-radius: $radius-chip;
+  background: $color-surface;
+  font-size: 15px;
+
+  &:hover {
+    border-color: $color-teal;
+  }
+}
+
+.parsedLabel {
+  color: $color-muted;
+  font-weight: 600;
+}
+
+.parsedValue {
+  font-weight: 800;
+}
