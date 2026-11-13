@@ -1,0 +1,99 @@
+@use "@/styles/variables" as *;
+
+.page {
+  flex: 1;
+  width: 100%;
+  max-width: $container-width;
+  margin-inline: auto;
+  padding: 56px $page-padding-x 88px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.panel {
+  width: 100%;
+  max-width: 560px;
+  padding: 40px clamp(20px, 5vw, 36px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  background: $color-surface;
+  border: 1px solid $color-line;
+  border-radius: $radius-card;
+  box-shadow: $shadow-form;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  border-radius: $radius-tile;
+}
+
+.iconError {
+  background: $color-accent-soft;
+  color: $color-accent;
+}
+
+.iconWait {
+  background: $color-teal-soft;
+  color: $color-teal;
+}
+
+.title {
+  font-family: $font-display;
+  font-weight: 600;
+  font-size: clamp(22px, 5vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  max-width: 440px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-body;
+}
+
+.actions {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: $radius-pill;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.primary {
+  background: $color-accent;
+  color: $color-on-accent;
+
+  &:hover {
+    filter: brightness(0.92);
+  }
+}
+
+.secondary {
+  border: 1.5px solid $color-ink;
+  background: $color-surface;
+  color: $color-ink;
+
+  &:hover {
+    background: $color-canvas;
+  }
+}

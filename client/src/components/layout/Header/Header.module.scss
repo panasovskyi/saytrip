@@ -1,0 +1,57 @@
+@use "../../../styles/variables" as *;
+
+.header {
+  width: 100%;
+  max-width: $container-width;
+  margin-inline: auto;
+  padding: 24px $page-padding-x;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: $font-display;
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+}
+
+.logoMark {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px 18px 18px 5px;
+  background: $color-accent;
+  color: $color-on-accent;
+}
+
+.logoAccent {
+  color: $color-accent;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 28px;
+  font-weight: 600;
+  font-size: 15px;
+
+  a:hover {
+    color: $color-teal;
+  }
+}
+
+.navLogin {
+  border: 1.5px solid $color-ink;
+  border-radius: $radius-pill;
+  padding: 10px 20px;
+}

@@ -1,0 +1,79 @@
+@use "@/styles/variables" as *;
+
+.ideasList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ideaCard {
+  position: relative;
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  background: $color-surface;
+  border: 1px solid $color-line;
+  border-radius: $radius-panel;
+
+  &:hover,
+  &:focus-within {
+    border-color: $color-teal;
+  }
+
+  &:nth-child(3n + 1) .tag {
+    background: $color-teal-soft;
+    color: $color-teal-ink;
+  }
+
+  &:nth-child(3n + 2) .tag {
+    background: $color-accent-soft;
+    color: $color-accent-ink;
+  }
+
+  &:nth-child(3n) .tag {
+    background: $color-green-soft;
+    color: $color-green;
+  }
+}
+
+.tag {
+  align-self: flex-start;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: $radius-pill;
+}
+
+.ideaText {
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+.ideaAction {
+  align-self: flex-start;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  color: $color-accent;
+  font-weight: 700;
+  font-size: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  &::after {
+    content: "→";
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

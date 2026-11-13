@@ -1,0 +1,21 @@
+type Props = {
+  size?: number;
+};
+
+export const SparkleIcon: React.FC<Props> = ({ size = 16 }) => {
+  return (
+    <svg
+      aria-hidden="true"
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z" />
+    </svg>
+  );
+};

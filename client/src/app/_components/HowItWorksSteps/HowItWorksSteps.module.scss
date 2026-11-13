@@ -1,0 +1,71 @@
+@use "@/styles/variables" as *;
+
+.steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  counter-reset: step;
+}
+
+.step {
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  counter-increment: step;
+
+  &:nth-child(2) {
+    .stepIcon {
+      background: $color-teal-soft;
+      color: $color-teal;
+    }
+
+    .stepNumber {
+      color: $color-teal;
+    }
+  }
+
+  &:nth-child(3) {
+    .stepIcon {
+      background: $color-green-soft;
+      color: $color-green;
+    }
+
+    .stepNumber {
+      color: $color-green;
+    }
+  }
+}
+
+.stepIcon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: $radius-tile;
+  background: $color-accent-soft;
+  color: $color-accent;
+}
+
+.stepNumber {
+  font-family: $font-display;
+  font-weight: 600;
+  font-size: 14px;
+  color: $color-accent;
+
+  &::before {
+    content: counter(step, decimal-leading-zero);
+  }
+}
+
+.stepTitle {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.stepText {
+  font-size: 16px;
+  line-height: 1.6;
+  color: $color-body-2;
+}

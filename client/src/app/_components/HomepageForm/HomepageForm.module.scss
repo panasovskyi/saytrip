@@ -1,0 +1,117 @@
+@use "../../../styles/variables" as *;
+
+.form {
+  width: 100%;
+  max-width: 880px;
+  margin-top: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  background: $color-surface;
+  border: 1px solid $color-line;
+  border-radius: $radius-card;
+  box-shadow: $shadow-form;
+
+  &:focus-within {
+    border-color: $color-teal;
+  }
+}
+
+.formLabel {
+  font-weight: 700;
+  font-size: 15px;
+  color: $color-body-2;
+}
+
+.formInput {
+  width: 100%;
+  border: 0;
+  resize: none;
+  background: transparent;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 500;
+  outline: none;
+
+  &::placeholder {
+    color: $color-muted;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.formHint {
+  margin-top: -8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: $color-muted;
+}
+
+.formHintWarn {
+  color: $color-accent-ink;
+}
+
+.formFooter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 16px;
+  border-top: 1px solid $color-line-soft;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid $color-line;
+  border-radius: $radius-pill;
+  background: $color-canvas;
+  font-size: 14px;
+  font-weight: 600;
+
+  &:hover {
+    background: $color-line-soft;
+  }
+}
+
+.submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  padding: 0 28px;
+  border-radius: $radius-pill;
+  background: $color-accent;
+  color: $color-on-accent;
+  font-weight: 800;
+  font-size: 16px;
+
+  &::after {
+    content: "→";
+  }
+
+  &:hover:not(:disabled) {
+    filter: brightness(0.92);
+  }
+
+  &:disabled {
+    background: $color-line-soft;
+    color: $color-muted;
+    cursor: not-allowed;
+  }
+}

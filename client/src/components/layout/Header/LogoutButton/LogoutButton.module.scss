@@ -1,0 +1,16 @@
+@use "@/styles/variables" as *;
+
+.navLogout {
+  border: 1.5px solid $color-ink;
+  border-radius: $radius-pill;
+  padding: 10px 20px;
+
+  &:hover:not(:disabled) {
+    color: $color-teal;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}
