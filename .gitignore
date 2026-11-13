@@ -1,0 +1,29 @@
+# personal notes
+A.md
+BACKLOG.md
+BEFORE-AI.md
+CLAUDE.md
+STYLES.md
+TODOS.md
+
+# dependencies and builds
+node_modules/
+dist/
+.next/
+*.tsbuildinfo
+
+# env files
+.env
+.env.*
+!.env.example
+
+# editors and OS
+.vscode/
+.idea/
+.claude/
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+npm-debug.log*
