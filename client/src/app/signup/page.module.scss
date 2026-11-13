@@ -1,0 +1,111 @@
+@use "@/styles/variables" as *;
+
+.page {
+  flex: 1;
+  width: 100%;
+  max-width: $container-width;
+  margin-inline: auto;
+  padding: 32px $page-padding-x 88px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.card {
+  width: 100%;
+  max-width: 480px;
+  padding: 36px clamp(20px, 5vw, 36px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: $color-surface;
+  border: 1px solid $color-line;
+  border-radius: $radius-card;
+  box-shadow: $shadow-form;
+}
+
+.head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  font-family: $font-display;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.description {
+  font-size: 16px;
+  line-height: 1.55;
+  color: $color-body-2;
+}
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  min-height: 52px;
+  border: 1.5px solid $color-ink;
+  border-radius: $radius-pill;
+  background: $color-surface;
+  font-size: 15px;
+  font-weight: 700;
+
+  &:hover {
+    background: $color-canvas;
+  }
+}
+
+.mark {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid $color-ink;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: $color-muted;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: $color-line-soft;
+  }
+}
+
+.switch {
+  text-align: center;
+  font-size: 15px;
+  color: $color-body-2;
+}
+
+.link {
+  font-weight: 700;
+  color: $color-teal;
+
+  &:hover {
+    color: $color-teal-ink;
+  }
+}

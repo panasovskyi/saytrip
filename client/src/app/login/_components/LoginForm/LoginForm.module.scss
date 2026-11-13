@@ -1,0 +1,98 @@
+@use "@/styles/variables" as *;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 700;
+  color: $color-body-2;
+}
+
+.forgot {
+  font-size: 14px;
+  font-weight: 700;
+  color: $color-teal;
+
+  &:hover {
+    color: $color-teal-ink;
+  }
+}
+
+.input {
+  width: 100%;
+  min-height: 52px;
+  padding: 0 16px;
+  border: 1.5px solid $color-line;
+  border-radius: $radius-chip;
+  background: $color-surface;
+  font-size: 16px;
+  font-weight: 500;
+
+  &::placeholder {
+    color: $color-muted;
+  }
+
+  &[aria-invalid="true"] {
+    border-color: $color-accent;
+  }
+
+  &:focus-visible {
+    border-color: $color-teal;
+  }
+
+  &:disabled {
+    background: $color-canvas;
+    color: $color-muted;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+}
+
+.submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 52px;
+  border-radius: $radius-pill;
+  background: $color-accent;
+  color: $color-on-accent;
+  font-size: 16px;
+  font-weight: 800;
+
+  &::after {
+    content: "→";
+  }
+
+  &:hover {
+    filter: brightness(0.92);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    filter: none;
+  }
+}
